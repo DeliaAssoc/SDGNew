@@ -1,0 +1,14 @@
+#search-drop {
+    display: none;
+    top: 5px;
+    position: relative;
+    padding: 0px;
+    min-width: inherit;
+    z-index: 9999999;
+    label{
+      margin-bottom: 0px;
+    }
+    #search{
+      margin-bottom: 0px;
+    }
+}

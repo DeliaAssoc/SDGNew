@@ -1,0 +1,133 @@
+.page-message{
+  @include outer-container;
+  margin-top: 40px;
+  h1{
+    text-align: center;
+    color: $red;
+    text-transform: uppercase;
+    line-height: 1.45em;
+  }
+}
+
+.page-cta{
+  @include outer-container;
+  padding: 30px 0px 60px 0px;;
+  .cta{
+    @include span-columns(3);
+    text-align: center;
+    padding: 30px 20px 30px 20px;
+    color: $white;
+    .cta-logo{
+      img{
+        width: 40%;
+      }
+    }
+    h3{
+      color: $blue;
+      margin: 15px 0px;
+      font-size: em(21px);
+      text-transform: uppercase;
+    }
+    p{
+      font-size: em(13px);
+      margin: 30px 0px 40px 0px;
+    }
+    a.btn{
+      border: $light-blue solid 2px;
+      padding: 5px 40px;
+      color: $light-blue;
+      text-transform: uppercase;
+      &:hover{
+        color: $blue;
+        border: $red solid 2px;
+      }
+    }
+  }
+}
+
+
+#about-content{
+  width: 100%;
+  background-color: $bg-gray;
+
+  .about-content-wrapper{
+    overflow: hidden;
+
+    .about-copy{
+      width: 50%;
+      float: left;
+      .about-copy-wrapper{
+        width: 480px;
+        float: right;
+        padding: 40px 20px 40px 0px;
+        h1{
+          color: $red;
+          font-size: em(32px);
+        }
+      }
+    }
+    .about-img{
+      width: 50%;
+      float: left;
+      height: 639px;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+
+@media only screen and (max-width: $home-break) {
+  .page-cta{
+
+    .cta{
+      @include span-columns(6);
+      @include omega(2n);
+
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .page-cta{
+
+    .cta{
+      @include span-columns(12);
+      @include omega(2n);
+
+    }
+  }
+}
+
+
+@media only screen and (max-width: $home-break) {
+  #about-content{
+    width: 100%;
+    background-color: $bg-gray;
+
+    .about-content-wrapper{
+      overflow: hidden;
+
+      .about-copy{
+        width: 100%;
+        float: left;
+        .about-copy-wrapper{
+          width: 100%;
+          float: right;
+          padding: 40px 20px 40px 20px;
+          h1{
+            color: $red;
+            font-size: em(32px);
+          }
+        }
+      }
+      .about-img{
+        width: 100%;
+        float: left;
+        height: 639px;
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+  }
+
+}

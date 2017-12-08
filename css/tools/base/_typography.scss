@@ -1,0 +1,101 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+td{
+  font-size: em(15px);
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+
+.page-content{
+  ul{
+    list-style-type: disc;
+    margin-left: 40px;
+  }
+}
+
+.fine-print{
+  margin-top: 30px;
+  font-size: em(11px);
+}
+
+
+.page-parent ul li h4{
+  margin: 0px;
+}
+
+@media (max-width: $mobile-break) {
+  h1{
+    font-size: em(36px);
+  }
+
+  h2{
+  font-size: em(16px);
+  }
+
+  p{
+    font-size: em(14px);
+  }
+  .fine-print{
+    margin-bottom: 30px;
+  }
+
+}
+
+.page-content{
+  h1{
+    font-size: em(23px);
+    color: $dark-gray;
+  }
+
+  p{
+    font-size: em(13px);
+    font-family: $arial;
+    color: $dark-gray;
+  }
+}
