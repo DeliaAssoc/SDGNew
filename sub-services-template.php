@@ -19,7 +19,7 @@ get_header(); ?>
 			?>
 
 			<div id="banner-page" class="banner" style="background-image: url( <?php echo $banner['url']; ?> );">
-				<div class="banner-wrapper">
+				<div class="banner-wrapper <?php the_field( 'banner_overlay_color' ); ?>">
 					<div class="banner-title">
 						<h1><?php echo get_the_title(); ?></h1>
 					</div>
@@ -42,10 +42,6 @@ get_header(); ?>
 							  
 							}
 							?>
-
-							<div class="sidebar-img">
-								<img src="<?php bloginfo('template_directory'); ?>/img/page/protected.jpg" alt="Protected">
-							</div>
 						</div>
 					</div>
 

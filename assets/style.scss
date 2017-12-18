@@ -377,7 +377,7 @@ html {
   
   button, input[type="button"], input[type="reset"], input[type="submit"] {
 	appearance: none;
-	background-color: #00456a;
+	background-color: $blue;
 	border: 0;
 	border-radius: 3px;
 	color: #fff;
@@ -401,7 +401,7 @@ html {
 	  cursor: not-allowed;
 	  opacity: 0.5; }
 	  button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
-		background-color: #00456a; }
+		background-color: $blue; }
   
   fieldset {
 	background-color: #f9f9f9;
@@ -442,7 +442,7 @@ html {
 	  border-color: #b8b8b8; }
 	input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
 	select[multiple=multiple]:focus {
-	  border-color: #00456a;
+	  border-color: $blue;
 	  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(0, 52, 81, 0.7);
 	  outline: none; }
 	input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
@@ -511,7 +511,7 @@ html {
 	vertical-align: middle; }
   
   body {
-	color: #333;
+	color: rgb(75, 75, 75);
 	font-family: "Roboto Slab", serif;
 	font-feature-settings: "kern", "liga", "pnum";
 	font-size: 1em;
@@ -532,7 +532,7 @@ html {
 	margin: 0 0 0.75em; }
   
   a {
-	color: #00456a;
+	color: $blue;
 	text-decoration: none;
 	transition: color 150ms ease; }
 	a:active, a:focus, a:hover {
@@ -549,6 +549,7 @@ html {
   
   img,
   picture {
+		height: auto;
 	margin: 0;
 	max-width: 100%; }
   
@@ -575,9 +576,7 @@ html {
   
 	h2 {
 	  font-size: 1em; }
-  
-	p {
-	  font-size: 0.875em; }
+
   
 	.fine-print {
 	  margin-bottom: 30px; } }
@@ -629,7 +628,7 @@ html {
 		  .site-header .site-branding #header-logo .header-img-wrapper #logo {
 			width: 60%;
 			position: relative;
-			top: 15px; }
+			}
 	  .site-header .site-branding #header-search {
 		float: left;
 		display: block;
@@ -640,12 +639,12 @@ html {
 		  margin-right: 0; }
 		.site-header .site-branding #header-search .fa {
 		  padding-left: 15px;
-		  color: #6594b3; }
+		  color: darken( $blue, 10% ); }
 		  .site-header .site-branding #header-search .fa:hover {
-			color: #00456a; }
+			color: $blue; }
 	  .site-header .site-branding .header-copy {
 		margin-top: 50px;
-		color: #de2027;
+		color: $red;
 		font-weight: 700; }
   
   @media only screen and (max-width: 956px) {
@@ -684,8 +683,7 @@ html {
 			position: relative; }
 			.site-header .site-branding #header-logo .header-img-wrapper #logo {
 			  width: 60%;
-			  position: relative;
-			  top: 15px; }
+			  position: relative; }
 		.site-header .site-branding #header-search {
 		  float: left;
 		  display: block;
@@ -696,9 +694,9 @@ html {
 			margin-right: 0; }
 		  .site-header .site-branding #header-search .fa {
 			padding-left: 15px;
-			color: #6594b3; }
+			color: darken( $blue, 10% ); }
 			.site-header .site-branding #header-search .fa:hover {
-			  color: #00456a; }
+			  color: $blue; }
 		.site-header .site-branding .header-copy {
 		  margin-top: 0px; } }
   @media only screen and (max-width: 775px) {
@@ -731,12 +729,11 @@ html {
 			position: relative; }
 			.site-header .site-branding #header-logo .header-img-wrapper #logo {
 			  width: 60%;
-			  position: relative;
-			  top: 15px; }
+			  position: relative;  }
 		.site-header .site-branding #header-search {
 		  display: none; } }
   #nav-wrapper {
-	background-color: #00456a;
+	background-color: $blue;
 	overflow: hidden; }
 	#nav-wrapper #nav-bar {
 	  max-width: 1000px;
@@ -758,15 +755,14 @@ html {
 		  #nav-wrapper #nav-bar #site-navigation .menu-primary-menu-container ul {
 			padding: 10px 0px; }
 			#nav-wrapper #nav-bar #site-navigation .menu-primary-menu-container ul li {
-			  display: inline-block;
-			  padding: 0px 20px 0px 0px; }
+			  display: inline-block; }
 			  #nav-wrapper #nav-bar #site-navigation .menu-primary-menu-container ul li .sub-menu {
 				display: none;
 				position: absolute;
 				z-index: 9999;
 				margin-top: 10px;
 				padding: 0px;
-				background-color: #de2027; }
+				background-color: $red; }
 				#nav-wrapper #nav-bar #site-navigation .menu-primary-menu-container ul li .sub-menu li {
 				  padding: 0px;
 				  display: block; }
@@ -778,7 +774,7 @@ html {
 					  background-color: #ae161b;
 					  border-bottom: transparent solid 0px; }
 			  #nav-wrapper #nav-bar #site-navigation .menu-primary-menu-container ul li a {
-				padding: 10px 20px 9px 0px;
+				padding: 10px 0 9px 0px;
 				font-family: "Roboto Slab", serif;
 				font-weight: 600;
 				text-transform: uppercase;
@@ -792,7 +788,7 @@ html {
   
   @media only screen and (max-width: 956px) {
 	#site-navigation .current_page_item a {
-	  color: #de2027;
+	  color: $red;
 	  border-bottom: transparent solid 0px; } }
   @media only screen and (max-width: 956px) {
 	#nav-bar #site-navigation {
@@ -816,7 +812,7 @@ html {
 			  padding: 0px 0px 0px 0px; } }
   @media only screen and (max-width: 775px) {
 	#nav-wrapper {
-	  background-color: #00456a;
+	  background-color: $blue;
 	  overflow: hidden; }
 	  #nav-wrapper #nav-bar {
 		max-width: 1000px;
@@ -870,7 +866,7 @@ html {
 				  width: 200px;
 				  margin: 0 auto; }
 				  #nav-wrapper #nav-bar #site-navigation .menu-primary-menu-container ul li a:hover {
-					color: #de2027;
+					color: $red;
 					border-bottom: transparent solid 0px; } }
   #nav-button {
 	float: left;
@@ -879,7 +875,7 @@ html {
 	width: 31.76157%;
 	padding: 10px 0px;
 	text-align: center;
-	background-color: #de2027; }
+	background-color: $red; }
 	#nav-button:last-child {
 	  margin-right: 0; }
 	#nav-button a {
@@ -940,7 +936,6 @@ html {
   
   .site-footer {
 	width: 100%;
-	background-color: #000000;
 	padding-bottom: 30px; }
 	.site-footer .site-info {
 	  max-width: 1000px;
@@ -955,7 +950,6 @@ html {
 		text-align: center; }
 		.site-footer .site-info #footer-contact img {
 		  position: relative;
-		  top: -22px;
 		  width: 70%;
 		  z-index: 9999; }
 		.site-footer .site-info #footer-contact ul {
@@ -995,7 +989,7 @@ html {
 	  margin: 0px;
 	  text-transform: uppercase; }
 	.site-footer h2 {
-	  color: #6594b3;
+	  color: darken( $blue, 10% );
 	  text-transform: uppercase;
 	  font-size: 1.25em;
 	  margin-top: 50px; }
@@ -1008,14 +1002,14 @@ html {
 	  font-weight: 400;
 	  margin: 5px 0px 0px 0px; }
 	  .site-footer p .red {
-		color: #de2027; }
+		color: $red; }
 	.site-footer li {
 	  font-size: 0.875em;
 	  font-weight: 400; }
 	  .site-footer li a {
 		color: #c7c8ca; }
 		.site-footer li a:hover {
-		  color: #de2027; }
+		  color: $red; }
   
   .social-icons li a {
 	color: #000000; }
@@ -1046,7 +1040,7 @@ html {
   .fa-twitter {
 	padding: 8px 9px; }
   
-  .fa-linkedin {
+  .fa-linkedin-in {
 	padding: 8px 10px; }
   
   @media only screen and (max-width: 956px) {
@@ -1064,7 +1058,6 @@ html {
   @media only screen and (max-width: 956px) {
 	.site-footer {
 	  width: 100%;
-	  background-color: #000000;
 	  padding-bottom: 30px; }
 	  .site-footer .site-info {
 		max-width: 1000px;
@@ -1080,7 +1073,6 @@ html {
 		  text-align: center; }
 		  .site-footer .site-info #footer-contact img {
 			position: relative;
-			top: -22px;
 			width: 70%;
 			z-index: 9999; }
 		  .site-footer .site-info #footer-contact ul {
@@ -1103,119 +1095,16 @@ html {
 	  .site-footer .footer-col:last-child {
 		margin-right: 0; } }
   #home-marketing {
-	background-color: #6594b3;
+	background-color: darken( $blue, 10% );
 	width: 100%; }
-	#home-marketing #home-marketing-wrapper {
-	  max-width: 1000px;
-	  margin-left: auto;
-	  margin-right: auto; }
-	  #home-marketing #home-marketing-wrapper::after {
-		clear: both;
-		content: "";
-		display: table; }
-	  #home-marketing #home-marketing-wrapper .marketing-box {
-		float: left;
-		display: block;
-		margin-right: 2.35765%;
-		width: 31.76157%;
-		background-color: #fdfbfc;
-		position: relative;
-		top: -167px;
-		-webkit-box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.21);
-		-moz-box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.21);
-		box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.21); }
-		#home-marketing #home-marketing-wrapper .marketing-box:last-child {
-		  margin-right: 0; }
-		#home-marketing #home-marketing-wrapper .marketing-box .marketing-copy {
-		  padding: 30px 25px 30px 25px; }
-		  #home-marketing #home-marketing-wrapper .marketing-box .marketing-copy h2 {
-			color: #00456a;
-			font-weight: 400;
-			text-transform: uppercase;
-			font-size: 1.3125em;
-			margin: 0px; }
-		  #home-marketing #home-marketing-wrapper .marketing-box .marketing-copy p {
-			margin: 20px 0px;
-			font-weight: 400;
-			font-size: 0.875em; }
-		  #home-marketing #home-marketing-wrapper .marketing-box .marketing-copy a {
-			margin: 0px;
-			color: #de2027;
-			font-size: 16px;
-			text-transform: uppercase; }
-			#home-marketing #home-marketing-wrapper .marketing-box .marketing-copy a:hover {
-			  color: #00456a; }
+	
   
   #about-marketing {
 	background-color: #fdfbfc;
 	padding: 80px 0px;
 	width: 100%; }
-	#about-marketing #about-marketing-wrapper {
-	  max-width: 1000px;
-	  margin-left: auto;
-	  margin-right: auto; }
-	  #about-marketing #about-marketing-wrapper::after {
-		clear: both;
-		content: "";
-		display: table; }
-	  #about-marketing #about-marketing-wrapper .marketing-box {
-		float: left;
-		display: block;
-		margin-right: 2.35765%;
-		width: 31.76157%;
-		background-color: #fdfbfc;
-		position: relative;
-		-webkit-box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.21);
-		-moz-box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.21);
-		box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.21); }
-		#about-marketing #about-marketing-wrapper .marketing-box:last-child {
-		  margin-right: 0; }
-		#about-marketing #about-marketing-wrapper .marketing-box .marketing-copy {
-		  padding: 30px 25px 30px 25px; }
-		  #about-marketing #about-marketing-wrapper .marketing-box .marketing-copy h2 {
-			color: #00456a;
-			font-weight: 400;
-			text-transform: uppercase;
-			font-size: 1.3125em;
-			margin: 0px; }
-		  #about-marketing #about-marketing-wrapper .marketing-box .marketing-copy p {
-			margin: 20px 0px;
-			font-weight: 400;
-			font-size: 0.875em; }
-		  #about-marketing #about-marketing-wrapper .marketing-box .marketing-copy a {
-			margin: 0px;
-			color: #de2027;
-			font-size: 16px;
-			text-transform: uppercase; }
-			#about-marketing #about-marketing-wrapper .marketing-box .marketing-copy a:hover {
-			  color: #00456a; }
+	
   
-  @media only screen and (max-width: 1145px) {
-	#home-marketing #home-marketing-wrapper {
-	  max-width: 410px;
-	  margin: 0 auto; }
-	  #home-marketing #home-marketing-wrapper .marketing-box {
-		float: left;
-		display: block;
-		margin-right: 2.35765%;
-		width: 100%;
-		top: 0;
-		margin-top: 40px; }
-		#home-marketing #home-marketing-wrapper .marketing-box:last-child {
-		  margin-right: 0; } }
-  @media only screen and (max-width: 1145px) {
-	#about-marketing #about-marketing-wrapper {
-	  max-width: 410px;
-	  margin: 0 auto; }
-	  #about-marketing #about-marketing-wrapper .marketing-box {
-		float: left;
-		display: block;
-		margin-right: 2.35765%;
-		width: 100%;
-		top: 0;
-		margin-top: 40px; }
-		#about-marketing #about-marketing-wrapper .marketing-box:last-child {
-		  margin-right: 0; } }
   #services {
 	width: 100%;
 	overflow: hidden; }
@@ -1229,7 +1118,7 @@ html {
 	  #services #services-copy h3 {
 		font-size: 1.75em;
 		text-transform: uppercase;
-		color: #de2027;
+		color: $red;
 		font-weight: 400; }
 	  #services #services-copy ul {
 		margin-left: 15px;
@@ -1254,7 +1143,7 @@ html {
 	  #services #services-copy h3 {
 		font-size: 1.5em;
 		text-transform: uppercase;
-		color: #de2027; }
+		color: $red; }
 	  #services #services-copy ul {
 		padding-left: 20px;
 		padding-right: 10px; }
@@ -1267,7 +1156,7 @@ html {
 	  width: 100%; } }
   .testimonial {
 	width: 100%;
-	background-color: #00456a; }
+	background-color: $blue; }
 	.testimonial .testimonial-wrapper {
 	  max-width: 1000px;
 	  margin-left: auto;
@@ -1276,8 +1165,6 @@ html {
 		clear: both;
 		content: "";
 		display: table; }
-	  .testimonial .testimonial-wrapper .flexslider .slides {
-		min-height: 300px !important; }
 		.testimonial .testimonial-wrapper .flexslider .slides .caption-wrap {
 		  padding: 60px 0px 0px 0px;
 		  text-align: center;
@@ -1292,10 +1179,6 @@ html {
 		  display: block;
 		  width: 100%;
 		  line-height: 1.4em; }
-		  .testimonial .testimonial-wrapper .flexslider .slides .caption-wrap h2 {
-			text-transform: uppercase;
-			font-size: 2.25em;
-			margin-bottom: 40px; }
 		  .testimonial .testimonial-wrapper .flexslider .slides .caption-wrap p {
 			margin-bottom: 10px; }
 		  .testimonial .testimonial-wrapper .flexslider .slides .caption-wrap .person {
@@ -1306,12 +1189,12 @@ html {
 		.testimonial .testimonial-wrapper .flexslider .flex-control-nav.flex-control-paging a {
 		  background: #fdfbfc; }
 		.testimonial .testimonial-wrapper .flexslider .flex-control-nav.flex-control-paging .flex-active {
-		  background: #de2027; }
+		  background: $red; }
   
   @media only screen and (max-width: 620px) {
 	.testimonial {
 	  width: 100%;
-	  background-color: #00456a; }
+	  background-color: $blue; }
 	  .testimonial .testimonial-wrapper {
 		max-width: 1000px;
 		margin-left: auto;
@@ -1320,8 +1203,6 @@ html {
 		  clear: both;
 		  content: "";
 		  display: table; }
-		.testimonial .testimonial-wrapper .flexslider .slides {
-		  min-height: 300px !important; }
 		  .testimonial .testimonial-wrapper .flexslider .slides .caption-wrap {
 			padding: 30px 0px 0px 0px;
 			text-align: center;
@@ -1350,7 +1231,7 @@ html {
 		  .testimonial .testimonial-wrapper .flexslider .flex-control-nav.flex-control-paging a {
 			background: #fdfbfc; }
 		  .testimonial .testimonial-wrapper .flexslider .flex-control-nav.flex-control-paging .flex-active {
-			background: #de2027; } }
+			background: $red; } }
   #banner-page {
 	height: 208px; }
   
@@ -1410,7 +1291,7 @@ html {
 			margin: 0px; } }
   .sidebar-nav ul li {
 	border: #e7e7e7 solid 1px;
-	margin: 10px 0px;
+	margin: 0 0 10px 0px;
 	padding: 15px 0px 15px 15px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -1418,12 +1299,12 @@ html {
 	.sidebar-nav ul li a {
 	  color: #707070; }
 	  .sidebar-nav ul li a:hover {
-		color: #6594b3; }
+		color: darken( $blue, 10% ); }
   .sidebar-nav .sidebar-img {
 	margin-top: 60px; }
   
   .sidebar-nav ul li.current_page_item a {
-	color: #6594b3; }
+	color: darken( $blue, 10% ); }
   
   .posts-sidebar-nav #categories {
 	-webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
@@ -1434,21 +1315,21 @@ html {
 	.posts-sidebar-nav #categories .widget-title {
 	  padding-left: 15px;
 	  text-transform: uppercase;
-	  color: #00456a; }
+	  color: $blue; }
 	.posts-sidebar-nav #categories ul li {
 	  padding: 5px 0px 5px 15px;
 	  text-transform: uppercase;
 	  font-weight: 700;
 	  font-size: 0.875em; }
 	  .posts-sidebar-nav #categories ul li a {
-		color: #6594b3; }
+		color: darken( $blue, 10% ); }
 		.posts-sidebar-nav #categories ul li a:hover {
-		  color: #00456a; }
+		  color: $blue; }
   .posts-sidebar-nav .sidebar-img {
 	margin-top: 60px; }
   
   .posts-sidebar-nav ul li.current_page_item a {
-	color: #6594b3; }
+	color: darken( $blue, 10% ); }
   
   @media only screen and (max-width: 1145px) {
 	.posts-sidebar-nav {
@@ -1475,7 +1356,7 @@ html {
 	  .request-sidebar .brochure-img img {
 		width: 100%; }
 	.request-sidebar h4.side-tele {
-	  color: #de2027;
+	  color: $red;
 	  margin-bottom: 20px; }
 	.request-sidebar p {
 	  font-size: 13px; }
@@ -1484,7 +1365,7 @@ html {
 	.request-sidebar #request-brochure p {
 	  font-size: 14px; }
 	  .request-sidebar #request-brochure p .red {
-		color: #de2027; }
+		color: $red; }
 	.request-sidebar #request-brochure #contact-name {
 	  width: 100%;
 	  padding-right: 0px;
@@ -1539,7 +1420,7 @@ html {
   
   #home-page {
 	width: 100%;
-	background-color: #6594b3; }
+	background-color: darken( $blue, 10% ); }
 	#home-page .better-w-heim {
 	  max-width: 1000px;
 	  margin-left: auto;
@@ -1591,40 +1472,9 @@ html {
 		  color: #fdfbfc;
 		  text-transform: uppercase; }
 		  #home-page #home-cta .cta a.btn:hover {
-			color: #00456a;
-			border: #de2027 solid 2px; }
+			color: $blue;
+			border: $red solid 2px; }
   
-  #home-logos {
-	padding: 40px 0px 40px 0px;
-	background-color: #6594b3; }
-	#home-logos .home-logos-wrapper {
-	  max-width: 1000px;
-	  margin-left: auto;
-	  margin-right: auto; }
-	  #home-logos .home-logos-wrapper::after {
-		clear: both;
-		content: "";
-		display: table; }
-	  #home-logos .home-logos-wrapper .home-logo {
-		text-align: center;
-		float: left;
-		display: block;
-		margin-right: 2.35765%;
-		width: 18.11388%; }
-		#home-logos .home-logos-wrapper .home-logo:last-child {
-		  margin-right: 0; }
-  
-  @media only screen and (max-width: 1145px) {
-	#home-logos {
-	  padding: 40px 0px 20px 0px; }
-	  #home-logos .home-logos-wrapper .home-logo {
-		float: left;
-		display: block;
-		margin-right: 2.35765%;
-		width: 100%;
-		margin-bottom: 30px; }
-		#home-logos .home-logos-wrapper .home-logo:last-child {
-		  margin-right: 0; } }
   @media only screen and (max-width: 1145px) {
 	#home-page .better-w-heim {
 	  max-width: 1000px;
@@ -1689,7 +1539,7 @@ html {
 	  .page-wrapper .page-content:last-child {
 		margin-right: 0; }
 	  .page-wrapper .page-content h1 {
-		color: #de2027;
+		color: $red;
 		text-transform: uppercase;
 		font-weight: 400;
 		margin: 0px 0px 5px 0px; }
@@ -1704,18 +1554,18 @@ html {
   .main-btn {
 	margin-top: 30px; }
 	.main-btn a.btn {
-	  border: #6594b3 solid 2px;
+	  border: darken( $blue, 10% ) solid 2px;
 	  padding: 5px 40px;
-	  color: #6594b3;
+	  color: darken( $blue, 10% );
 	  text-transform: uppercase; }
 	  .main-btn a.btn:hover {
-		color: #00456a;
-		border: #de2027 solid 2px; }
+		color: $blue;
+		border: $red solid 2px; }
   
   .logo-banner {
 	margin-top: 50px;
 	border: transparent solid 1px;
-	background-color: #6594b3; }
+	background-color: darken( $blue, 10% ); }
 	.logo-banner ul.logo-banner-logos {
 	  text-align: center;
 	  margin-top: 20px;
@@ -1752,7 +1602,7 @@ html {
 		.page-wrapper .page-content:last-child {
 		  margin-right: 0; }
 		.page-wrapper .page-content h1 {
-		  color: #de2027;
+		  color: $red;
 		  text-transform: uppercase;
 		  font-weight: 400; }
 		.page-wrapper .page-content .featured-image {
@@ -1776,7 +1626,7 @@ html {
 	  display: table; }
 	.page-message h1 {
 	  text-align: center;
-	  color: #de2027;
+	  color: $red;
 	  text-transform: uppercase;
 	  line-height: 1.45em; }
   
@@ -1802,7 +1652,7 @@ html {
 	  .page-cta .cta .cta-logo img {
 		width: 40%; }
 	  .page-cta .cta h3 {
-		color: #00456a;
+		color: $blue;
 		margin: 15px 0px;
 		font-size: 1.3125em;
 		text-transform: uppercase; }
@@ -1811,13 +1661,13 @@ html {
 		margin: 30px 0px 40px 0px;
 		color: #333333; }
 	  .page-cta .cta a.btn {
-		border: #6594b3 solid 2px;
+		border: darken( $blue, 10% ) solid 2px;
 		padding: 5px 40px;
-		color: #6594b3;
+		color: darken( $blue, 10% );
 		text-transform: uppercase; }
 		.page-cta .cta a.btn:hover {
-		  color: #00456a;
-		  border: #de2027 solid 2px; }
+		  color: $blue;
+		  border: $red solid 2px; }
   
   #about-content {
 	width: 100%;
@@ -1832,12 +1682,12 @@ html {
 		  float: right;
 		  padding: 40px 40px 40px 0px; }
 		  #about-content .about-content-wrapper .about-copy .about-copy-wrapper h1 {
-			color: #de2027;
+			color: $red;
 			font-size: 2em; }
 	  #about-content .about-content-wrapper .about-img {
 		width: 50%;
 		float: left;
-		height: 840px;
+		height: 420px;
 		background-size: cover;
 		background-position: center center; }
   
@@ -1879,12 +1729,12 @@ html {
 			float: right;
 			padding: 40px 20px 40px 20px; }
 			#about-content .about-content-wrapper .about-copy .about-copy-wrapper h1 {
-			  color: #de2027;
+			  color: $red;
 			  font-size: 2em; }
 		#about-content .about-content-wrapper .about-img {
 		  width: 100%;
 		  float: left;
-		  height: 639px;
+		  height: 400px;
 		  background-size: cover;
 		  background-position: center center; } }
   .page-wrapper .posts-sidebar {
@@ -1916,9 +1766,9 @@ html {
 		padding: 0px;
 		font-size: 1.5em;
 		text-transform: uppercase;
-		color: #6594b3; }
+		color: darken( $blue, 10% ); }
 		.posts-wrapper .entry-title a:hover {
-		  color: #00456a; }
+		  color: $blue; }
 	.posts-wrapper .entry-content {
 	  margin: 25px 0px 0px 0px; }
 	.posts-wrapper .posted-on a {
@@ -1929,10 +1779,10 @@ html {
 	.posts-wrapper .more-link {
 	  font-style: italic;
 	  font-size: 1em;
-	  color: #6594b3;
+	  color: darken( $blue, 10% );
 	  font-weight: 700; }
 	  .posts-wrapper .more-link:hover {
-		color: #00456a; }
+		color: $blue; }
 	.posts-wrapper .updated {
 	  display: none; }
 	.posts-wrapper .byline {
@@ -1965,7 +1815,7 @@ html {
 		.page-wrapper .page-content:last-child {
 		  margin-right: 0; }
 		.page-wrapper .page-content h1 {
-		  color: #de2027;
+		  color: $red;
 		  text-transform: uppercase;
 		  font-weight: 400; }
 		.page-wrapper .page-content .featured-image {
@@ -2009,11 +1859,11 @@ html {
   #contact-form p {
 	font-size: 0.875em; }
   #contact-form .red {
-	color: #de2027;
+	color: $red;
 	padding-right: 3px; }
   #contact-form input[type="email"], #contact-form input[type="text"], #contact-form textarea {
 	background-color: #fff;
-	border: 1px solid #6594b3;
+	border: 1px solid darken( $blue, 10% );
 	border-radius: 0px;
 	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
 	box-sizing: border-box;
@@ -2028,14 +1878,14 @@ html {
   #contact-form .wpcf7-submit {
 	float: right;
 	background-color: transparent;
-	border: #de2027 solid 1px;
+	border: $red solid 1px;
 	border-radius: 0px;
 	padding: 10px 40px;
-	color: #de2027;
+	color: $red;
 	text-transform: uppercase; }
 	#contact-form .wpcf7-submit:hover {
-	  border: #00456a solid 1px;
-	  color: #00456a; }
+	  border: $blue solid 1px;
+	  color: $blue; }
   
   @media only screen and (max-width: 1145px) {
 	.contact-col {

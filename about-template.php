@@ -19,7 +19,7 @@ get_header(); ?>
 			?>
 
 			<div id="banner-page" class="banner" style="background-image: url( <?php echo $banner['url']; ?> );">
-				<div class="banner-wrapper">
+				<div class="banner-wrapper <?php the_field( 'banner_overlay_color' ); ?>">
 					<div class="banner-title">
 						<h1><?php echo get_the_title(); ?></h1>
 					</div>
@@ -28,7 +28,7 @@ get_header(); ?>
 
 			<section id="about" class="page">
 	    	<div class="page-content">
-					<div class="page-message">
+					<!-- <div class="page-message">
 						<h1>Nobody gives you personal attention<br> and peace of mind like Heim, because<br> nobody cares like Heim.</h1>
 					</div>
 					<div class="page-cta">
@@ -64,7 +64,7 @@ get_header(); ?>
 			        <p>Trust the Heim family to take care of your family’s home security, fire, automation and entertainment needs. Heim means peace of mind.</p>
 			        <a href="/about/heim-cares/" class="btn">Learn More</a>
 			      </div>
-					</div>
+					</div> -->
 
 
 
@@ -90,39 +90,33 @@ get_header(); ?>
 	    		<?php endwhile; // End of the loop. ?>
 
 					<section id="about-marketing">
-				    <div id="about-marketing-wrapper">
-				      <div class="marketing-box">
-				        <div class="marketing-img">
-				          <img src="<?php bloginfo('template_directory'); ?>/img/home/home-res.jpg" alt="Residential">
-				        </div>
-				        <div class="marketing-copy">
-				          <h2>Residential</h3>
-				          <p>No one cares for the safety of your home and family like Heim.</p>
-				          <a href="/residential/">DISCOVER WHY</a>
-				        </div>
-				      </div>
-				      <div class="marketing-box">
-				        <div class="marketing-img">
-				          <img src="<?php bloginfo('template_directory'); ?>/img/home/home-com.jpg" alt="Residential">
-				        </div>
-				        <div class="marketing-copy">
-				          <h2>Commercial</h3>
-				          <p>You want to protect and secure your company. Heim makes it happen.</p>
-				          <a href="/commercial/">DISCOVER HOW</a>
-				        </div>
-				      </div>
-				      <div class="marketing-box">
-				        <div class="marketing-img">
-				          <img src="<?php bloginfo('template_directory'); ?>/img/home/home-cus.jpg" alt="Residential">
-				        </div>
-				        <div class="marketing-copy">
-				          <h2>Custom Buildings</h3>
-				          <p>Ask about our Preferred-Partner Program for new home construction.</p>
-				          <a href="/custom-partners/">LEARN MORE</a>
-				        </div>
-				      </div>
-				    </div>
-				  </section>
+					<div class="marketing-wrapper">
+			
+					<?php if ( have_rows( 'callouts', 'option' ) ) : ?>
+			
+						<?php while ( have_rows( 'callouts', 'option' ) ) : the_row(); ?>
+			
+						<div class="marketing-box">
+			
+							<div class="marketing-img">
+								<?php $img = get_sub_field( 'callout_image', 'option' ); ?>
+								<img src="<?php echo $img[ 'url' ]; ?>" alt="<?php echo $img[ 'alt' ]; ?>">
+							</div>
+			
+							<div class="marketing-copy">
+								<h2><?php the_sub_field( 'callout_title', 'option' ); ?></h2>
+								<p><?php the_sub_field( 'callout_copy', 'option' ); ?></p>
+								<a href="<?php the_sub_field( 'callout_link_url', 'option' ); ?>"><?php the_sub_field( 'callout_link_text', 'option' ); ?></a>
+							</div>
+			
+						</div>
+			
+						<?php endwhile; ?>
+			
+					<?php endif; ?>
+			
+					</div>
+				</section>
 
 	    	</div>
 	    </section>

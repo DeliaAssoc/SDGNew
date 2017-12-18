@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div id="banner-page-not-found" class="banner">
-				<div class="banner-wrapper">
+				<div class="banner-wrapper <?php the_field( 'banner_overlay_color' ); ?>">
 					<div class="banner-title">
 						<h1>Page Not Found</h1>
 					</div>

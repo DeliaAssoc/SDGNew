@@ -17,7 +17,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+
+<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
 <?php wp_head(); ?>
 </head>
@@ -37,13 +39,13 @@
 				<div id="header-logo">
 					<div class="header-img-wrapper">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<img id="logo" src="<?php bloginfo('template_directory'); ?>/img/header/heim-logo.svg" alt="logo">
+							<img id="logo" src="<?php bloginfo('template_directory'); ?>/img/sdg-logo-large.png" alt="logo">
 						</a>
 					</div>
 				</div>
 
 				<div id="header-search" class="header-copy">
-					1-800-564-HEIM
+					<a href="tel:<?php echo get_theme_mod( 'sdgnew_company_tollfree' ); ?>"><?php echo get_theme_mod( 'sdgnew_company_tollfree' ); ?></a>
 					<a href="#"><i class="fa fa-search"></i></a>
 
 						<div id="search-drop">
