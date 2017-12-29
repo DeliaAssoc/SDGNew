@@ -2,6 +2,16 @@
     overflow: hidden;
 }
 
+#home-slider {
+
+    .metaslider {
+
+        .nivo-caption {
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);         
+        }
+    }
+}
+
 #home-marketing {
     display: block;
     overflow: hidden;
@@ -15,6 +25,7 @@
     text-align: center;
 
     h2 {
+        color: $lightest;
         font-size: 1.75em;
         font-weight: 500;
         letter-spacing: 0.75px;

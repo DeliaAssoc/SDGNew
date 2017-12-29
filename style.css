@@ -1985,6 +1985,9 @@ html {
 #home-slider {
   width: 100%;
 }
+#home-slider h2 {
+  color: #fff;
+}
 
 #home-slider .metaslider {
   margin: 0px;
@@ -2866,7 +2869,16 @@ html {
 }
 
 h2 {
+  color: #d61c23;
+  font-size: 1.75rem;
+  font-weight: 400;
   text-transform: uppercase;
+}
+
+h3 {
+  color: #009cd4;
+  font-size: 1.325rem;
+  font-weight: 400;
 }
 
 .site-header .site-branding #header-logo .header-img-wrapper #logo {
@@ -2875,6 +2887,10 @@ h2 {
 
 .site-content {
   overflow: hidden;
+}
+
+#home-slider .metaslider .nivo-caption {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 
 #home-marketing {
@@ -2890,6 +2906,7 @@ h2 {
   text-align: center;
 }
 .home-call-to-action h2 {
+  color: #fff;
   font-size: 1.75em;
   font-weight: 500;
   letter-spacing: 0.75px;

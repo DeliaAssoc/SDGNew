@@ -72,6 +72,10 @@ $socialArray = array(
 
 				<?php wp_nav_menu( array( 'theme_location' => 'quick-links', 'menu_id' => 'quick-links' ) ); ?>
 
+				<a style="display:block;margin-top:20px;" href="https://www.ul.com/">
+					<img src="/wp-content/uploads/2017/12/ul-logo.png" alt="">
+				</a>
+
 			</div>
 			<div id="footer-newsletter" class="footer-col">
 				<h2>Subscribe to News</h2>

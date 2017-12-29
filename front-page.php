@@ -83,7 +83,7 @@ get_header(); ?>
 
   <section class="testimonial">
     <div class="testimonial-wrapper">
-      <h2>How People Feel About Heim</h2>
+      <h2>How People Feel About SDG</h2>
       <?php
       echo do_shortcode("[metaslider id=33]");
       ?>

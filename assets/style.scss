@@ -1384,7 +1384,12 @@ html {
 	  border: #6494b4 solid 1px; }
   
   #home-slider {
-	width: 100%; }
+	width: 100%; 
+
+	h2 {
+		color: $lightest;
+	}
+}
 	#home-slider .metaslider {
 	  margin: 0px; }
 	  #home-slider .metaslider .nivo-caption {

@@ -29,8 +29,9 @@ get_header(); ?>
 			<section class="page varmodule">
                 <div class="constrain">
                     <div class="page-sidebar">
-                        <!-- <?php wp_nav_menu( array( 'theme_location' => 'services', 'menu_id' => 'services-menu' ) ); ?> -->
-                        <h2>Left Sidebar Area</h2>
+                        <div class="sidebar-nav">
+                            <?php wp_nav_menu( array( 'theme_location' => 'services', 'menu_id' => 'services-menu' ) ); ?>
+                        </div>
                     </div>
 
                     <?php while ( have_posts() ) : the_post(); ?>
